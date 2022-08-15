@@ -1,49 +1,68 @@
 <!doctype html>
 <html>
-  <head>
-    <link rel="shortcut icon" href="/devtools-samples/favicon-96x96.png"/>
-    <title>Math Machine</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      h1 {
-        font-size: 1.5em;
-      }
-      input, button {
-        min-width: 72px;
-        min-height: 36px;
-        border: 1px solid grey;
-        margin: 8px 0px;
-      }
-      label, input, button {
-        display: block;
-      }
-      input {
-        margin-bottom: 1em;
-      }
-      h1, label, input, button, p, h2, div {
-        font-family: sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Debugging Demo</h1>
-    <label for="num1">Number 1</label>
-    <input placeholder="Number 1" id="num1">
-    <label for="num2">Number 2</label>
-    <input placeholder="Number 2" id="num2">
+    <head>
+        <link rel="shortcut icon" href="/devtools-samples/favicon-96x96.png"/>
+        <title>Math Machine</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h1 {
+                font-size: 1.5em;
+            }
+            body {
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                max-width: 200px;
+            }
+            input, button {
+                min-width: 72px;
+                min-height: 36px;
+                border: 1px solid grey;
+                margin: 8px 0px;
+            }
 
-    <button id="addButton">Add</button>
-    <button id="multiplyButton">Multiply</button>
-    <button id="divideButton">Divide</button>
-    <button id="subtractButton">Subtract</button>
-    <button id="saveButton">Save</button>
-    <button id="clearButton">Clear All</button>
-    <button id="ansButton">ANS</button>
+            label, input, button {
+                display: block;
+            }
 
-    <p></p>
+            input {
+                margin-bottom: 1em;
+            }
 
-    <h2>Saved Results</h2>
-    <div id="history"></div>
-    <script src="get-started.js"></script>
-  </body>
+            h1, label, input, button, p, h2,h3, div {
+                font-family: sans-serif;
+            }
+            input {
+                border-radius: 8px;
+            }
+            button {
+                padding: 8px;
+                min-width: 100px;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+            }
+            h3 {
+                margin: 8px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Debugging Demo</h1>
+        <label for="num1">Number 1</label>
+        <input placeholder="Number 1" id="num1">
+        <label for="num2">Number 2</label>
+        <input placeholder="Number 2" id="num2">
+        <button id="addButton">Add</button>
+        <button id="multiplyButton">Multiply</button>
+        <button id="divideButton">Divide</button>
+        <button id="subtractButton">Subtract</button>
+        <button id="saveButton">Save</button>
+        <button id="clearButton">Clear All</button>
+        <button id="ansButton">ANS</button>
+        <p></p>
+        <h3>Saved Results</h3>
+        <div id="history"></div>
+        <script src="get-started.js"></script>
+    </body>
 </html>
