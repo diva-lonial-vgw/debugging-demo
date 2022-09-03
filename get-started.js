@@ -129,7 +129,7 @@ function updateAddLabel() {
 function updateMultiplyLabel() {
   var number1 = getNumber1();
   var number2 = getNumber2();
-  var result = number1 ** number2;
+  var result = multiply(number1, number2);
   label.textContent = number1 + ' x ' + number2 + ' = ' + result;
 }
 
@@ -193,6 +193,10 @@ function getNumber2() {
 
 function getLabel() {
   return label.textContent;
+}
+
+function multiply(a, b) {
+  return a ** b
 }
 
 var inputs = document.querySelectorAll('input');
