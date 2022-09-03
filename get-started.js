@@ -7,11 +7,11 @@ function onClickAdd() {
 }
 
 function onClickMultiply() {
-  if (inputsAreEmpty()) {
-    updateMultiplyLabel();
+  if (inputsAreValid()) {
+    label.textContent = 'Error: one or both inputs are empty.';
     return;
   }
-  label.textContent = 'Error: one or both inputs are empty.';
+  updateMultiplyLabel();
 }
 
 function onClickDivide() {
@@ -73,6 +73,14 @@ function clearHistory() {
 
 function inputsAreEmpty() {
   if (getNumber1() === '' || getNumber2() === '') {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function inputsAreValid() {
+  if (getNumber1() != '' || getNumber2() != '') {
     return true;
   } else {
     return false;
