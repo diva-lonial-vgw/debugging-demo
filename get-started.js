@@ -80,7 +80,7 @@ function inputsAreEmpty() {
 }
 
 function inputsAreValid() {
-  if (getNumber1() != '' || getNumber2() != '') {
+  if (getNumber1() != '' && getNumber2() != '') {
     return true;
   } else {
     return false;
